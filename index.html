@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CSSRulePlugin.min.js" integrity="sha512-+35N1KBHwTDnFOBSqO2nm/qsf5okaS74sUZu/rT/wlvuAfJ1hrAoGlWZip2l1LHB1q2i8B2k84Pb/NrC38bv8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="loader">
+        <h1>Sticky Notes</h1>
+    </div>
+    
+    <div id="main">
+        <div id="box-add">
+             <div id="note-text">
+                <form action="">
+                    <textarea name="note" id="note" placeholder="Write Your Note Here..." ></textarea>
+                    <input type="submit" value="Click Here To Paste it !!" >
+                </form>
+             </div>
+            <div class="box-template" id="bx-add"><i class="ri-add-line ri-5x"></i></div>
+            <div class="box-template" id="bx-t1"></div>
+            <div class="box-template" id="bx-t2"></div>
+            <div class="box-template" id="bx-t3"></div>
+        </div>
+        <!-- <div class="box">
+            <img id="pin" src="./push-pin-icon-14.png" alt="">
+            <p>fdsfd/p>
+        </div>
+       
+    <div id="box1">
+            
+        </div>    <div id="box2">
+            
+        </div>
+        <div id="box3">
+            
+        </div><div id="box">
+            
+        </div><div id="box">
+            
+        </div> -->
+    </div>
+</body>
+</html>

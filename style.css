@@ -29,7 +29,7 @@ body,html{
     min-height: 100vh;
     background: linear-gradient(45deg,rgb(18, 18, 18),rgb(97, 93, 93));
     padding: 3vw 2vw;
-    gap: 8.5rem;
+    gap: 7rem;
     align-content: space-between;
 }
 #loader{
@@ -102,7 +102,7 @@ form input:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4;
+    z-index: 5;
     background-color: rgba(128, 128, 128, 0.896);
 }
 #bx-add::before{
@@ -122,7 +122,7 @@ form input:hover{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.315);
 }
 #bx-t1{
-    z-index: 3;
+    z-index: 4;
     background-color: rgb(128, 255, 0);
     transform: rotate(-4deg) translateX(10px);
 }
@@ -135,6 +135,11 @@ form input:hover{
     z-index: 1;
     background-color:rgba(255, 192, 203);
     transform: rotatex(6deg) translateX(-10px)
+}
+#bx-t4{
+    z-index:3;
+    background-color:#AC4DAC;
+    transform: rotatex(9deg) translateY(-26px)
 }
 
 
@@ -172,3 +177,88 @@ overflow: hidden;
 .box-template{
     transition:all ease 1s;
 } */
+
+
+@media (max-width:780px) {
+    .box img{
+        height: 50px;
+        width: 50px;
+    }
+    #main{
+       gap: 6.5rem;
+    }
+    #loader h1{
+        font-size: 7vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-wrap: nowrap;
+        font-family: cursive;
+    }
+    #box-add{
+   
+        height: 300px;
+        width: 250px;
+        font-size: 2rem;
+    }
+    form{
+        height: 300px;
+        width: 250px;
+    }
+    .box-template{
+        height: 300px;
+        width: 250px;
+        position: absolute;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.315);
+    }
+    .box{
+        height: 300px;
+        width: 250px;
+}
+.box p{
+    font-size: 2rem;
+    padding:0 0.5em;
+}
+}
+@media(max-width:480px){
+    .box img{
+        height: 40px;
+        width: 40px;
+    }
+    #main{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-left: 20%;
+    }
+    #loader h1{
+        font-size: 7vw;
+        font-family: cursive;
+    }
+    #box-add{
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+        width: 250px;
+        font-size: 2.5rem;
+    }
+    form{
+        height: 300px;
+        width: 250px;
+    }
+    .box-template{
+        height: 300px;
+        width: 250px;
+        position: absolute;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.315);
+    }
+    .box{
+        height: 300px;
+        width: 250px;
+}
+.box p{
+    font-size: 2.3rem;
+    padding:0 0.5em;
+}
+}

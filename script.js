@@ -87,7 +87,24 @@ tl.to("body #loader h1",{
     
 })
 tl.to("body #loader",{
-    y:"-100vh",
     duration:2,
+    y:"-100vh",
     opacity:0,
+    background:"transparent",
  })
+tl.from("#box-add #bx-t1",{
+    duration:1,
+    transform: "rotate(0deg) translateX(0)"
+},"cards")
+tl.from("#box-add #bx-t2",{
+    duration:1,
+    transform: "rotate(0deg) translateX(0)"
+},"cards")
+tl.from("#box-add #bx-t3",{
+    duration:1,
+    transform: "rotate(0deg) translateX(0)"
+},"cards")
+tl.from("#box-add #bx-t4",{
+    duration:1,
+    transform: "rotate(0deg) translateX(0)"
+},"cards")

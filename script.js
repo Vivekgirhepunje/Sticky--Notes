@@ -29,7 +29,7 @@ document.querySelector("form").addEventListener("submit",(e)=>{
     <p>${text.value}</p>`;
     newbox.style.backgroundColor= randomcls();
     let img= newbox.querySelector("img");
-    newbox.style.transform=`rotate(${degvalue}deg)`;
+    // newbox.style.transform=`rotate(${degvalue}deg)`;
     if(degvalue===5){
         img.style.alignSelf="flex-start";
     }
@@ -41,9 +41,44 @@ document.querySelector("form").addEventListener("submit",(e)=>{
     }
     // console.log(newbox)
     main.append(newbox);
+
+    setTimeout(() => {
+        if(degvalue===0){
+
+            gsap.from("#main >div:last-child",{
+                transform:"rotate(-2deg)",
+                transformOrigin:"top center",
+                duration:1.5,
+                repeat:2,
+                yoyo:"true"
+            })
+        }
+        else if(degvalue===5){
+        
+                gsap.to("#main >div:last-child",{
+                    transform:"rotate(4deg)",
+                    transformOrigin:"top left",
+                    duration:1,
+                    repeat:2,
+                    yoyo:"true",
+                    // transition:"all linear 2s"
+                })
+            }
+        else{
+            gsap.to("#main >div:last-child",{
+                transform:"rotate(-4deg)",
+                transformOrigin:"top right",
+                duration:1,
+                repeat:2,
+                yoyo:"true",
+                // transition:"all linear 2s"
+            })
+        }
+    }, 100);
     text.value="";
     notetext.style.display="none";
 })
+
 // code to remove the box on double click with classes 
 setTimeout(() => {
     main.addEventListener("dblclick",(e)=>{
@@ -108,3 +143,10 @@ tl.from("#box-add #bx-t4",{
     duration:1,
     transform: "rotate(0deg) translateX(0)"
 },"cards")
+
+
+// think about moving animation for for 2 repat 
+console.log(document.querySelector("#main div:last-child"))
+// document.addEventListener("DOMContentLoaded", function() {
+//     console.log(document.querySelector("#main div:last-child"));
+// });
